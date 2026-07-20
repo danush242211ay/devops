@@ -25,7 +25,14 @@ pipeline{
         stage('disk-usage'){
             steps{
                 sh '''
-                    du -sch
+                    du -x
+                '''
+            }
+        }
+        stage('poll-scm-checkin'){
+            steps{
+                sh '''
+                    echo "git update checking for every minute"
                 '''
             }
         }
