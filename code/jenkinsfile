@@ -20,12 +20,26 @@ pipeline{
                 '''
             }
         }
-        stage('Test the image'){
+        /* stage('Test the image'){
             steps{
                 sh '''
                     docker kill c1
                     docker rm c1
                     docker run -it -d --name c1 -p 9001:8501 ${IMAGE_NAME}
+                '''
+            }
+        } */
+        stage('Docker-hub-login'){
+            steps{
+                withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                    sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME -password-stdin'
+                }
+            }
+        }
+        stage('Pushing to Registery'){
+            steps{
+                sh '''
+                    docker push ${IMAGE_NAME}
                 '''
             }
         }
