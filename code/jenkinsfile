@@ -20,5 +20,12 @@ pipeline{
                 '''
             }
         }
+        stage('Test the image'){
+            steps{
+                sh '''
+                    docker run -it -d --name c1 -p 9001:8501 ${IMAGE_NAME}
+                '''
+            }
+        }
     }
 }
