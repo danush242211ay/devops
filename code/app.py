@@ -68,10 +68,10 @@ if submitted:
         st.video("https://www.youtube.com/watch?v=rfscVS0vtbw")
 
         st.markdown("### 📺 2. Streamlit Tutorial")
-        st.video("https://www.youtube.com/watch?v=example")
+        st.video("https://youtu.be/8c74mXV2lJ0?si=Gk-71UXCw40rdNWy")
 
         st.markdown("### 📺 3. Build a Streamlit App")
-        st.video("https://www.youtube.com/watch?v=example")
+        st.video("https://youtu.be/6Vx4DuW_g4A?si=6J04KTgNBr8wJBhQ")
 
         st.info("🎯 Watch these videos and start building amazing real-world projects!")
 
