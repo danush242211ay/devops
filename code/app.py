@@ -65,13 +65,13 @@ if submitted:
 
         # Video links
         st.markdown("### 📺 1. Python Full Course")
-        st.markdown("https://www.youtube.com/watch?v=rfscVS0vtbw")
+        st.video("https://www.youtube.com/watch?v=rfscVS0vtbw")
 
         st.markdown("### 📺 2. Streamlit Tutorial")
-        st.markdown("https://www.youtube.com/results?search_query=codebasics+streamlit+tutorial")
+        st.video("https://www.youtube.com/watch?v=example")
 
         st.markdown("### 📺 3. Build a Streamlit App")
-        st.markdown("https://www.youtube.com/results?search_query=data+professor+streamlit")
+        st.video("https://www.youtube.com/watch?v=example")
 
         st.info("🎯 Watch these videos and start building amazing real-world projects!")
 
